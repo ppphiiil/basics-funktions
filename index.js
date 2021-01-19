@@ -78,3 +78,26 @@ console.log(`\n\nEXERCISE 2`);
 
 
 
+function isPangram(sentence) {
+    let string = sentence.toLowerCase();
+    let alphabeth = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    let counter = 0;
+
+
+    for (let j in alphabeth) {
+        console.log("j:" + j);
+        if (string.includes(alphabeth[j])) {
+            counter++;
+        }
+    }
+
+    if (counter >= 26) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+
+console.log(isPangram('The five boxing wizards jump quickly'));
